@@ -34,8 +34,8 @@ gulp.task('concat', ()=> {
       "node_modules/purecss/build/menus-horizontal.css",
       "node_modules/purecss/build/menus-scrollable.css",
       "node_modules/purecss/build/menus-skin.css",
-      "node_modules/purecss/build/pure.css",
-      "node_modules/purecss/build/pure-nr.css",
+     // "node_modules/purecss/build/pure.css",
+      //"node_modules/purecss/build/pure-nr.css",
       "node_modules/purecss/build/tables.css",
       "purecss-custom/*.css"
     ])
