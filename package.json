@@ -4,7 +4,7 @@
   "description": "Concatenation of the files that are in the \"build\" folder, to generate a single file and work in a more comfortable way.",
   "main": "index.js",
   "repository": "https://github.com/skotvarg/purecss-onefile.git",
-  "author": "Michael Scott B",
+  "author": "Michael Scott Bravo",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
