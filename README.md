@@ -1,6 +1,8 @@
 # purecss-onefile
 Concatenation of the files that are in the "build" folder, to generate a single file and work in a more comfortable way.
 
+## Based on purecss 0.6.2
+
 ## Add in angular
 
 ```
