@@ -66,12 +66,12 @@ gulp.task('concat', ()=> {
       "node_modules/purecss/build/tables.css",
       "purecss-custom/*.css"
     ])
-    .pipe(concatCss("onefile.css"))
+    .pipe(concatCss("onefile-compound.css"))
     .pipe(gulp.dest("purecss-onefile"))
 });
 
 gulp.task('minicss', ()=> {
-  return gulp.src("purecss-onefile/onefile.css")
+  return gulp.src("purecss-onefile/onefile-compound.css")
     .pipe(cleanCss({debug: true}, function(details) {
             console.log(details.name + ': ' + details.stats.originalSize);
             console.log(details.name + ': ' + details.stats.minifiedSize);
