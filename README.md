@@ -15,6 +15,13 @@ npm install purecss-onefile --save-dev
 yarn add -D purecss-onefile
 ```
 
+## Commands gulp
+
+```
+>gulp pure
+
+>gulp compound
+```
 ## Two ways to compile Pure CSS:
 
 **Pure**, which contains the main(pure.css), plus the files included in the purecss-custom folder.
