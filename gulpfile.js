@@ -37,6 +37,7 @@ gulp.task('concat', ()=> {
       "node_modules/purecss/build/pure.css",
       "node_modules/purecss/build/pure-nr.css",
       "node_modules/purecss/build/tables.css",
+      "purecss-custom/*.css"
     ])
     .pipe(concatCss("onefile.css"))
     .pipe(gulp.dest("purecss-onefile"))
