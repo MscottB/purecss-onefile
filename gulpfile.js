@@ -6,22 +6,22 @@ cleanCss = require("gulp-clean-css"),
 runSequence = require('run-sequence'),
 rename = require("gulp-rename");
 
-gulp.task("puro",(callback)=>{
+gulp.task("pure",(callback)=>{
     runSequence(
         "pure+custom",
          "minicss-pure",
             callback
      );
-    notify("Default puro exito");
+    notify("Compilation pure successful");
 });
 
-gulp.task("compuesto",(callback)=>{
+gulp.task("compound",(callback)=>{
     runSequence(
-        "concat",
-         "minicss",
+        "concat-compound",
+         "minicss-compound",
             callback
      );
-    notify("Default compuesto exito");
+    notify("Compilation compound successful");
 });
 
 gulp.task('pure+custom', ()=> {
@@ -44,7 +44,7 @@ gulp.task('minicss-pure', ()=> {
 });
 
 
-gulp.task('concat', ()=> {
+gulp.task('concat-compound', ()=> {
   return gulp.src([
       "node_modules/purecss/build/base.css",
       "node_modules/purecss/build/base-context.css",
@@ -70,7 +70,7 @@ gulp.task('concat', ()=> {
     .pipe(gulp.dest("purecss-onefile"))
 });
 
-gulp.task('minicss', ()=> {
+gulp.task('minicss-compound', ()=> {
   return gulp.src("purecss-onefile/onefile-compound.css")
     .pipe(cleanCss({debug: true}, function(details) {
             console.log(details.name + ': ' + details.stats.originalSize);

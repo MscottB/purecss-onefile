@@ -3,20 +3,55 @@ Concatenation of the files that are in the "build" folder, to generate a single 
 
 ## Based on [PureCSS](https://purecss.io/) 0.6.2
 
-## Install
+## Install NPM
 
 ```
-npm install purecss-onefile
+npm install purecss-onefile --save-dev
 ```
 
-## Add custom code
+## Install Yarn
 
-Every new CSS file is added to the **purecss-custom** folder, and then run the gulp command to get a new **_Onefile.css_**.
+```
+yarn add -D purecss-onefile
+```
+
+## Two ways to compile Pure CSS:
+
+**Pure**, which contains the main(pure.css), plus the files included in the purecss-custom folder.
+
+_Deliver the following files:_
+
+
+**Original**:
+```
+./purecss-onefile/onefile-pure.css
+```
+
+**Minified**:
+```
+./purecss-onefile/onefile-pure.min.css
+```
+
+**Compound**, in this compilation select the modules to compile, include the custom folder.
+
+_Deliver the following files:_
+
+
+**Original**:
+```
+./purecss-onefile/onefile-compound.css
+```
+
+**Minified**:
+```
+./purecss-onefile/onefile-compound.min.css
+```
+
 
 ## Add in angular
 
 ```
 "styles": [
-        "../purecss-onefile/onefile.min.css"
+        "../purecss-onefile/onefile-pure.min.css"
       ],
 ```  
