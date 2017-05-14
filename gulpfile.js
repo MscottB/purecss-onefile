@@ -6,14 +6,43 @@ cleanCss = require("gulp-clean-css"),
 runSequence = require('run-sequence'),
 rename = require("gulp-rename");
 
-gulp.task("default",(callback)=>{
+gulp.task("puro",(callback)=>{
+    runSequence(
+        "pure+custom",
+         "minicss-pure",
+            callback
+     );
+    notify("Default puro exito");
+});
+
+gulp.task("compuesto",(callback)=>{
     runSequence(
         "concat",
          "minicss",
             callback
      );
-    notify("Default exito");
+    notify("Default compuesto exito");
 });
+
+gulp.task('pure+custom', ()=> {
+  return gulp.src([
+      "node_modules/purecss/build/pure.css",
+      "purecss-custom/*.css"
+    ])
+    .pipe(concatCss("onefile-pure.css"))
+    .pipe(gulp.dest("purecss-onefile"))
+});
+
+gulp.task('minicss-pure', ()=> {
+  return gulp.src("purecss-onefile/onefile-pure.css")
+    .pipe(cleanCss({debug: true}, function(details) {
+            console.log(details.name + ': ' + details.stats.originalSize);
+            console.log(details.name + ': ' + details.stats.minifiedSize);
+        }))
+    .pipe(rename({suffix: ".min"}))
+    .pipe(gulp.dest('purecss-onefile'))
+});
+
 
 gulp.task('concat', ()=> {
   return gulp.src([
@@ -34,14 +63,11 @@ gulp.task('concat', ()=> {
       "node_modules/purecss/build/menus-horizontal.css",
       "node_modules/purecss/build/menus-scrollable.css",
       "node_modules/purecss/build/menus-skin.css",
-     // "node_modules/purecss/build/pure.css",
-      //"node_modules/purecss/build/pure-nr.css",
       "node_modules/purecss/build/tables.css",
       "purecss-custom/*.css"
     ])
     .pipe(concatCss("onefile.css"))
     .pipe(gulp.dest("purecss-onefile"))
-    .pipe(notify("Concat exito"));
 });
 
 gulp.task('minicss', ()=> {
@@ -52,5 +78,4 @@ gulp.task('minicss', ()=> {
         }))
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest('purecss-onefile'))
-    .pipe(notify("minificacion con exito"));
 });
