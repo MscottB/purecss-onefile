@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Concatenation of the files that are in the \"build\" folder, to generate a single file and work in a more comfortable way.",
   "main": "index.js",
-  "repository": "git://github.com/skotvarg/purecss-onefile.git",
+  "repository": "https://github.com/skotvarg/purecss-onefile.git",
   "author": "Michael Scott B",
   "license": "MIT",
   "devDependencies": {
