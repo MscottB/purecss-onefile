@@ -3,6 +3,12 @@ Concatenation of the files that are in the "build" folder, to generate a single 
 
 ## Based on [PureCSS](https://purecss.io/) 0.6.2
 
+## Install
+
+```
+npm install purecss-onefile
+```
+
 ## Add custom code
 
 Every new CSS file is added to the **purecss-custom** folder, and then run the gulp command to get a new **_Onefile.css_**.
