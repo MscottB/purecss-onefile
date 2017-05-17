@@ -1,21 +1,24 @@
+[![NPM version](https://badge.fury.io/js/purecss-onefile.svg)](https://badge.fury.io/js/purecss-onefile)
+[![GitHub version](https://badge.fury.io/gh/skotvarg%2Fpurecss-onefile.svg)](https://badge.fury.io/gh/skotvarg%2Fpurecss-onefile)
+
 # PureCSS-OneFile
 Concatenation of the files that are in the "build" folder, to generate a single file and work in a more comfortable way. It also includes the sass precompiler.
 
 ## Dependencies
 
- Based on [PureCSS](https://purecss.io/)
- Includes precompiler [Sass](http://sass-lang.com/)
+ -Based on [PureCSS](https://purecss.io/)
+ -Includes precompiler [Sass](http://sass-lang.com/)
 
 
 ## Install NPM
 
-```
+```sh
 npm install purecss-onefile --save-dev
 ```
 
 ## Install Yarn
 
-```
+```sh
 yarn add -D purecss-onefile
 ```
 
