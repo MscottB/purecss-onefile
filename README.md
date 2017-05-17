@@ -1,7 +1,8 @@
 # PureCSS-OneFile
-Concatenation of the files that are in the "build" folder, to generate a single file and work in a more comfortable way.
+Concatenation of the files that are in the "build" folder, to generate a single file and work in a more comfortable way. It also includes the sass precompiler.
 
-## Based on [PureCSS](https://purecss.io/) 0.6.2
+## Based on [PureCSS](https://purecss.io/)
+## Includes precompiler [Sass](http://sass-lang.com/)
 
 ## Install NPM
 
@@ -21,8 +22,12 @@ yarn add -D purecss-onefile
 >gulp pure
 
 >gulp compound
+
+>gulp sass-p
+
+>gulp sass-c
 ```
-## Two ways to compile Pure CSS:
+## Four ways to compile Pure CSS:
 
 **Pure**, which contains the main(pure.css), plus the files included in the purecss-custom folder.
 
@@ -54,6 +59,9 @@ _Deliver the following files:_
 ./purecss-onefile/onefile-compound.min.css
 ```
 
+**Sass Pure**, Includes compilation in the compilation process of pure.
+
+**Sass Compound**, Includes compilation in the compilation process of compound.
 
 ## Add in angular
 

@@ -1,0 +1,11 @@
+/* Example with sass precompiler  */
+.example1 {
+  width: 100%; }
+
+.example2 {
+  background: #1abc9c;
+  height: 200px;
+  display: block;
+  float: left;
+  width: getColumnWidth(100%, 4, 1%);
+  margin: 0 1%; }

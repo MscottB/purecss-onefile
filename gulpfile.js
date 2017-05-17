@@ -1,10 +1,16 @@
+'use strict';
 const
 gulp = require("gulp"),
 concatCss = require("gulp-concat-css"),
 notify = require("gulp-notify"),
 cleanCss = require("gulp-clean-css"),
 runSequence = require('run-sequence'),
-rename = require("gulp-rename");
+rename = require("gulp-rename"),
+sass = require('gulp-sass');
+
+/**
+ * Main Task
+ */
 
 gulp.task("pure",(callback)=>{
     runSequence(
@@ -23,6 +29,34 @@ gulp.task("compound",(callback)=>{
      );
     notify("Compilation compound successful");
 });
+
+/**
+ * Main Task with sass
+ */
+
+gulp.task("sass-p",(callback)=>{
+    runSequence(
+        "sass-compilation",
+        "pure+custom",
+         "minicss-pure",
+            callback
+     );
+    notify("Compilation compound successful");
+});
+
+gulp.task("sass-c",(callback)=>{
+    runSequence(
+        "sass-compilation",
+        "concat-compound",
+         "minicss-compound",
+            callback
+     );
+    notify("Compilation compound successful");
+});
+
+/**
+ * Compilation tasks on pure
+ */
 
 gulp.task('pure+custom', ()=> {
   return gulp.src([
@@ -43,6 +77,9 @@ gulp.task('minicss-pure', ()=> {
     .pipe(gulp.dest('purecss-onefile'))
 });
 
+/**
+ * Compilation tasks on compound
+ */
 
 gulp.task('concat-compound', ()=> {
   return gulp.src([
@@ -78,4 +115,14 @@ gulp.task('minicss-compound', ()=> {
         }))
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest('purecss-onefile'))
+});
+
+/**
+ * Sass precompilation task
+ */
+
+gulp.task('sass-compilation', ()=> {
+  return gulp.src("sass/*.scss")
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest("purecss-custom"))
 });

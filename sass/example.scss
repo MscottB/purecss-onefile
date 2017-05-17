@@ -1,0 +1,19 @@
+  /* Example with sass precompiler  */
+
+$container-width: 100%;
+$column-count: 4;
+$margin: 1%;
+$colour: #1abc9c ;
+
+.example1 {
+  width: $container-width;
+}
+
+.example2 {
+  background: $colour;
+  height: 200px;
+  display: block;
+  float: left;
+  width: getColumnWidth($container-width,$column-count,$margin);
+  margin: 0 $margin;
+}

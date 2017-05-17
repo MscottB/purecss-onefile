@@ -1,12 +1,12 @@
 {
   "name": "purecss-onefile",
-  "version": "0.2.15",
+  "version": "0.3.17",
   "description": "Concatenation of the files that are in the \"build\" folder, to generate a single file and work in a more comfortable way.",
   "main": "index.html",
   "repository": "https://github.com/skotvarg/purecss-onefile.git",
   "author": "Michael Scott Bravo",
   "license": "MIT",
-    "scripts": {
+  "scripts": {
     "gulp": "gulp"
   },
   "devDependencies": {
@@ -15,6 +15,7 @@
     "gulp-concat-css": "^2.3.0",
     "gulp-notify": "^3.0.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
     "purecss": "^0.6.2",
     "run-sequence": "^1.2.2"
   }
