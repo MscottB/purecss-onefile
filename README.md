@@ -2,10 +2,10 @@
 Concatenation of the files that are in the "build" folder, to generate a single file and work in a more comfortable way. It also includes the sass precompiler.
 
 ## Dependencies
-```
+
  Based on [PureCSS](https://purecss.io/)
  Includes precompiler [Sass](http://sass-lang.com/)
-```
+
 
 ## Install NPM
 
