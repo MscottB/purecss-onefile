@@ -1,6 +1,6 @@
 {
   "name": "purecss-onefile",
-  "version": "0.3.17",
+  "version": "0.3.18",
   "description": "Concatenation of the files that are in the \"build\" folder, to generate a single file and work in a more comfortable way.",
   "main": "index.html",
   "repository": "https://github.com/skotvarg/purecss-onefile.git",
