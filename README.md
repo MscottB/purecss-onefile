@@ -48,12 +48,12 @@ _Deliver the following files:_
 
 
 **Original**:
-```
+```json
 ./purecss-onefile/onefile-pure.css
 ```
 
 **Minified**:
-```
+```json
 ./purecss-onefile/onefile-pure.min.css
 ```
 
@@ -87,12 +87,12 @@ return gulp.src([
 _Deliver the following files:_
 
 **Original**:
-```
+```json
 ./purecss-onefile/onefile-compound.css
 ```
 
 **Minified**:
-```
+```json
 ./purecss-onefile/onefile-compound.min.css
 ```
 
@@ -102,14 +102,16 @@ _Deliver the following files:_
 
 ## Add in angular
 
-```
+```json
 "styles": [
         "../purecss-onefile/onefile-pure.min.css"
       ],
 ```  
-# License
+# License MIT
 ===========
 
 Copyright (c) 2017 Michael Scott B
 
-Licensed under MIT license
+For more information see the [LICENSE file][]
+
+[LICENSE file]: https://github.com/skotvarg/purecss-onefile/blob/master/LICENSE.md
