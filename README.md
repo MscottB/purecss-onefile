@@ -58,4 +58,4 @@ Copyright (c) 2017 Michael Scott B
 
 For more information see the [LICENSE file][]
 
-[LICENSE file]: 
+[LICENSE file]: https://github.com/MscottB/purecss-onefile/blob/master/LICENSE.md
