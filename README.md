@@ -49,7 +49,7 @@ yarn add -D purecss-onefile
 
 # How to use completeSC
 
-The files available for occupancy are found in files-purecss.js, which will be added to the concatCompound task found in gulpfilesEs6.js in the gulp.src section.
+The files available for occupancy are found in [files-purecss.js](https://github.com/MscottB/purecss-onefile/blob/master/gulp-config/files-purecss.js), which will be added to the concatCompound task found in gulpfilesEs6.js in the gulp.src section.
 
 # License MIT
 ===========
