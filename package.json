@@ -1,41 +1,52 @@
 {
-  "name": "purecss-onefile",
-  "version": "0.3.20",
-  "description": "Concatenation of the files that are in the \"build\" folder, to generate a single file and work in a more comfortable way.",
-  "main": "gulpfile.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/skotvarg/purecss-onefile.git"
-  },
-  "author": "Michael Scott B",
-  "license": "MIT",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.2.0",
-    "gulp-concat-css": "^2.3.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "purecss": "^0.6.2",
-    "run-sequence": "^1.2.2"
-  },
-  "keywords": [
-    "gulp",
-    "gulp-sass",
-    "sass",
-    "css",
-    "scss",
-    "purecss",
-    "pure",
-    "purecss-onefile",
-    "onefile",
-    "gulp-clean-css",
-    "gulp-concat-css",
-    "gulp-notify",
-    "gulp-rename",
-    "run-sequence"
-  ]
+    "name": "purecss-onefile",
+    "version": "1.0.0",
+    "description": "Work with PureCss and Sass, from one place, with a single file for your projects.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/skotvarg/purecss-onefile.git"
+    },
+    "author": "Michael Scott B",
+    "license": "MIT",
+    "scripts": {
+        "notifier": "notify -t \"Notification Script\" -m \"script successfully executed\" -x 5000 -s || echo 'error in the execution'",
+        "gc": "babel gulp-config/gulpfileEs6.js -o gulp-config/gulpfileEs5.js",
+        "sassC": "gulp --gulpfile gulp-config/gulpfileEs5.js sassCompilation",
+        "concatC": "gulp --gulpfile gulp-config/gulpfileEs5.js concatCompound",
+        "miniC": "gulp --gulpfile gulp-config/gulpfileEs5.js minicssCompound",
+        "pureC": "gulp --gulpfile gulp-config/gulpfileEs5.js pureCustom",
+        "miniP": "gulp --gulpfile gulp-config/gulpfileEs5.js minicssPure",
+        "completeSC": "yarn gc && yarn sassC && yarn concatC && yarn miniC && yarn notifier",
+        "completeSP": "yarn gc && yarn sassC && yarn pureC && yarn miniP && yarn notifier"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
+        "gulp": "4.0.0",
+        "gulp-clean-css": "3.9.4",
+        "gulp-cli": "^2.0.1",
+        "gulp-concat-css": "3.1.0",
+        "gulp-rename": "1.2.3",
+        "gulp-sass": "4.0.1",
+        "node-notifier": "^5.2.1",
+        "node-notifier-cli": "^1.1.2",
+        "purecss": "1.0.0"
+    },
+    "keywords": [
+        "gulp",
+        "gulp-sass",
+        "sass",
+        "css",
+        "scss",
+        "purecss",
+        "pure",
+        "purecss-onefile",
+        "onefile",
+        "gulp-clean-css",
+        "gulp-concat-css",
+        "gulp-notify",
+        "gulp-rename",
+        "run-sequence"
+    ]
 }

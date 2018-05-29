@@ -1,0 +1,20 @@
+{
+    "sassCompilation": {
+        "src": "../sass/*.{scss,sass}",
+        "dest": "../purecss-custom"
+    },
+    "concatCompound": {
+        "dest": "../purecss-onefile"
+    },
+    "minicssCompound": {
+        "src": "../purecss-onefile/onefile-compound.css",
+        "dest": "../purecss-onefile"
+    },
+    "pureCustom": {
+        "dest": "../purecss-onefile"
+    },
+    "minicssPure": {
+        "src": "../purecss-onefile/onefile-pure.css",
+        "dest": "../purecss-onefile"
+    }
+}
