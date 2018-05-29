@@ -4,7 +4,7 @@
     "description": "Work with PureCss and Sass, from one place, with a single file for your projects.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/skotvarg/purecss-onefile.git"
+        "url": "https://github.com/MscottB/purecss-onefile.git"
     },
     "author": "Michael Scott B",
     "license": "MIT",
