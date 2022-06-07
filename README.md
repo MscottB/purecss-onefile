@@ -1,3 +1,5 @@
+# Repository archived due to non-use and lack of updating, in addition to better options.
+
 [![NPM version](https://badge.fury.io/js/purecss-onefile.svg)](https://badge.fury.io/js/purecss-onefile)
 [![GitHub version](https://badge.fury.io/gh/skotvarg%2Fpurecss-onefile.svg)](https://badge.fury.io/gh/skotvarg%2Fpurecss-onefile)
 [![David](https://img.shields.io/david/dev/expressjs/express.svg)](https://github.com/skotvarg/purecss-onefile)
